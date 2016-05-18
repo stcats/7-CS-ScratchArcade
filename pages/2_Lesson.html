@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Snake Game in Scratch</title>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="js/navbar.js" type="text/javascript"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Snake Game in Scratch</h1>
+  <div class="github-fork-ribbon-wrapper left">
+    <div class="github-fork-ribbon">
+      <a href="https://github.com/digixc/7-CS-ScratchArcade">Fork me on GitHub</a>
+    </div>
+  </div>
+<div id="stickyribbon">
+    <ul>
+      <li><a href="1_Lesson.html">Week1</a></li>
+      <li><a href="2_Lesson.html">Week2</a></li>
+      <li><a href="3_Lesson.html">Week3</a></li>
+      <li><a href="assessment.html">Assessment</a></li>
+    </ul>
+  </div>
+<div id="outline-container-sec-1" class="outline-2 activity">
+<h2 id="sec-1">Snake Game</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-sec-1-1" class="outline-3 learn">
+<h3 id="sec-1-1">Learn It</h3>
+<div class="outline-text-3" id="text-1-1">
+
+<ul class="org-ul">
+<li>In this project you are going to create the well known snake game.
+</li>
+<li>The game play is as follow:
+<ol class="org-ol">
+<li>The snake moves continuously on the game board
+</li>
+<li>The player uses the arrow keys to direct the direction of the snake's movement
+</li>
+<li>A mouse is placed on the board at a random location
+</li>
+<li>If the snake eats a mouse, two things happen: the player scores one and the snake grows longer
+</li>
+<li>When the snake has grown to certain length, there is danger that the snake may move cross its own body. If this happens, the game is over
+</li>
+</ol>
+</li>
+</ul>
+</div>
+<div id="outline-container-sec-1-1-1" class="outline-4">
+<h4 id="sec-1-1-1">We are going to code the above steps one at a time in Scratch</h4>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3 code">
+<h3 id="sec-1-2">Code It - The snake moves continuously on the game board</h3>
+<div class="outline-text-3" id="text-1-2">
+<ol class="org-ol">
+<li>Create a new Scratch project.Delete the cat sptite by right clicking on it then delete.
+</li>
+
+<li>Next, we add a snake sprite. The sprite has two costumes, a head and a body. Right click on each image below to download to your homedrive. You can make your own later.
+</li>
+</ol>
+
+<img src='./img/SnakeImg/head.png' style='display: inline;margin-left: 100px;'>
+<img src='./img/SnakeImg/body.png' style='display: inline;margin-left: 100px;'>
+
+<ol class="org-ol">
+<li>Follow the following steps to create the snake sprite with two costumes.
+</li>
+</ol>
+
+<div class="figure">
+<p><img src="img/SnakeImg/stepsToCreateSprite.png" alt="stepsToCreateSprite.png" />
+</p>
+</div>
+<ol class="org-ol">
+<li>Now, lets add <b><code>some scripts</code></b> to make the snake move <b><code>continuously</code></b>. <b><code>Continuous movement</code></b> means using a loop. The scripts for this are very simple for now.
+</li>
+</ol>
+
+
+<div class="figure">
+<p><img src="img/SnakeImg/script1.png" alt="script1.png" />
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-3" class="outline-3 code">
+<h3 id="sec-1-3">Code It - The player uses the arrow keys to direct the direction of the snake's movement</h3>
+<div class="outline-text-3" id="text-1-3">
+
+<div class="figure">
+<p><img src="img/SnakeImg/head.png" alt="head.png" />
+</p>
+</div>
+<ol class="org-ol">
+<li>Next we need to enable to player to control which way the snake moves.
+</li>
+<li>This is accomplished by using the four arrows.
+</li>
+<li>Each time an arrow key is pressed, an event is <code>triggered</code>, then the snake will point the way the player wants it to move.
+</li>
+<li>During the game play, the event of arrow key pressing needs to be <b><code>continuously</code></b> monitored. Again, we will use a <b><code>forever loop</code></b>
+</li>
+</ol>
+
+<div class="figure">
+<p><img src="img/SnakeImg/script2.png" alt="script2.png" />
+</p>
+</div>
+<ol class="org-ol">
+<li>You need to add code for other three arrow keys inside the loop.
+</li>
+<li>Test your code to make sure you can control which way the snake moves.If you are stuck, check that your code looks like <a href="./img/SnakeImg/script3.png">this</a>.
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-sec-1-4" class="outline-3 code">
+<h3 id="sec-1-4">Code It - create variables to keep score and the speed of the snake movement</h3>
+<div class="outline-text-3" id="text-1-4">
+<ol class="org-ol">
+<li>The snake movement is bit too fast. The computer is working as hard as it can to run your loop on move the snake 20 steps each loop.
+</li>
+<li>Lets create a variable called <code>speed</code> so that we can slow down the movement a bit but later we can also change the variable to make the game harder.
+</li>
+</ol>
+
+<div class="figure">
+<p><img src="img/SnakeImg/script4.png" alt="script4.png" />
+</p>
+</div>
+<ol class="org-ol">
+<li>The speed is going to store the waiting time between each loop.
+</li>
+<li>We need to give it a value (number of seconds) at the start of the game. I used 0.2 seconds. You can use 0.1 second to make it move a bit faster.
+</li>
+</ol>
+
+<div class="figure">
+<p><img src="img/SnakeImg/script5.png" alt="script5.png" />
+</p>
+</div>
+<ol class="org-ol">
+<li>Test your code and make sure everything is still working.
+</li>
+<li>Create another variable called <b><code>score</code></b>  to be used later and set it to 0 after green flag is clicked.
+</li>
+</ol>
+
+<div class="figure">
+<p><img src="img/SnakeImg/script16.png" alt="script16.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-5" class="outline-3 code">
+<h3 id="sec-1-5">Code It - A mouse is placed on the board at a random location</h3>
+<div class="outline-text-3" id="text-1-5">
+
+<div class="figure">
+<p><img src="img/SnakeImg/mouse.svg" alt="mouse.svg" />
+</p>
+</div>
+<ol class="org-ol">
+<li>To get on making our game, we are going to use the mouse sprite from the Scratch site. Once you finish making this game, you can always go back to change the sprite to what you like.
+</li>
+</ol>
+
+<img src='./img/SnakeImg/script6.png' style='display: inline;margin-left: 100px;'>
+<img src='./img/SnakeImg/script7.png' style='display: inline;margin-left: 100px;'>
+
+<ol class="org-ol">
+<li>Lets add code so the new sprite, mouse can be placed on <b><code>a random location within the board</code></b>.  The layout and dimension of the game board in Scratch is like this:
+</li>
+</ol>
+
+<div class="figure">
+<p><img src="img/SnakeImg/scratch-stage.jpg" alt="scratch-stage.jpg" />
+</p>
+</div>
+<ul class="org-ul">
+<li>The maximum on Y axis is 240, the minimum on X axis is -240.
+</li>
+<li>The maximum on Y axis is 180, the minimum on Y axis is -180.
+</li>
+<li>We want the whole image of the mouse to be placed inside the border, so we need to pick a location that is somewhere between -230 and 230 on X axis and between -165 and 165 on Y axis.
+</li>
+<li>To pick a random location, we need to use the random block from Scratch's Operators block.
+</li>
+<li>Make sure you have click on the mouse sprite and then go to its script window. The mouse need to go to a random location at the start of the game (when the geen flag is clicked).
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/SnakeImg/script8.png" alt="script8.png" />
+</p>
+</div>
+<ol class="org-ol">
+<li>Test your code to make sure it works.
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-sec-1-6" class="outline-3 code">
+<h3 id="sec-1-6">Code It - The snake eats the mouse and score increase by 1</h3>
+<div class="outline-text-3" id="text-1-6">
+
+<div class="figure">
+<p><img src="img/SnakeImg/mouse.svg" alt="mouse.svg" />
+</p>
+</div>
+<ol class="org-ol">
+<li>The eating happens when the snake 'touch" the mouse. 
+</li>
+<li>Once eaten, the mouse needs to move to a new random location and the score increases by 1.
+</li>
+<li>This eating, moving to a new location and increasing score need to be monitored <b><code>continuously</code></b> during the game play.  All those three actions should be inside a <b><code>forever loop</code></b>.
+</li>
+<li>make sure you are working on the mouse sprite script window. 
+</li>
+</ol>
+
+<div class="figure">
+<p><img src="img/SnakeImg/script9.png" alt="script9.png" />
+</p>
+</div>
+
+<ol class="org-ol">
+<li>Test again and make sure it all works.
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-sec-1-7" class="outline-3 code">
+<h3 id="sec-1-7">Code It - The snake eats the mouse and it grows by one size</h3>
+<div class="outline-text-3" id="text-1-7">
+
+<div class="figure">
+<p><img src="img/SnakeImg/head.png" alt="head.png" />
+</p>
+</div>
+<ol class="org-ol">
+<li>This is probably the most difficult script to understand. So lets go over it slowly. Watch the following finished game carefully you will find the added body parts of the snake follow the head in both movement and directions. 
+</li>
+<li>In scratch, you can create a clone or many clones to do exactly what we want.
+</li>
+</ol>
+<video width="320" height="240" src="./img/SnakeImg/demo.mov"  controls />
+</video>
+
+<ol class="org-ol">
+<li>Lets create some clones to follow the head. 
+</li>
+</ol>
+
+<div class="figure">
+<p><img src="img/SnakeImg/script11.png" alt="script11.png" />
+</p>
+</div>
+<ol class="org-ol">
+<li>Those clones should have the costume of the body, NOT the head. So after being created as a clone, they should switch costume to the body. So add the following code block to your snake sprite.
+</li>
+</ol>
+
+<div class="figure">
+<p><img src="img/SnakeImg/script12.png" alt="script12.png" />
+</p>
+</div>
+<ol class="org-ol">
+<li>Test your code now you will find:
+<ul class="org-ul">
+<li>there are too many clones being created
+</li>
+<li>if the costume being switched to body, the head no longer showed up.
+</li>
+</ul>
+</li>
+<li>To correct the costume problem, we just need to switch the costume to head at the start of the game.
+</li>
+<li>To correct the too many clones problem, we need to delete some clones at regular intervals. But how many clones to keep? Well, each time the player scores, there should be a clone added to the snake. 
+</li>
+<li>The clone has been created every 0.2 seconds (the speed) continuously. To mainrain the same number of clones as the score, the time we need to wait before delete extra clones is:
+</li>
+</ol>
+
+<pre class="example">
+the number of clones * the speed
+
+The Number of clones is the same as the score
+</pre>
+
+
+<div class="figure">
+<p><img src="img/SnakeImg/script13.png" alt="script13.png" />
+</p>
+</div>
+<ol class="org-ol">
+<li>Test your code, it should now keep tracking of score and the snake should grow after eating a mouse.
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-sec-1-8" class="outline-3 code">
+<h3 id="sec-1-8">Code It - Game Over</h3>
+<div class="outline-text-3" id="text-1-8">
+<ol class="org-ol">
+<li>The game is over when the snake's body has crossed with itself. 
+</li>
+<li>When this happens, we need to broadcast a game over message, so other sprites can act accordingly. 
+</li>
+<li>It is much easier if you have a body costume that has a different colour from the head. 
+</li>
+<li>Since the body is a clone, we need to add some code to the clone on the snake sprite script window.
+</li>
+</ol>
+
+<div class="figure">
+<p><img src="img/SnakeImg/script14.png" alt="script14.png" />
+</p>
+</div>
+<ol class="org-ol">
+<li>What heppens to the snake when the game is over? We can hide it and stop its scripts. BUT if you hide it, make sure you also add show at the start of the game.
+</li>
+</ol>
+
+<div class="figure">
+<p><img src="img/SnakeImg/script15.png" alt="script15.png" />
+</p>
+</div>
+<ol class="org-ol">
+<li>Do the same for the mouse's script when the mouse receives GameOver message.
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-sec-1-9" class="outline-3 badge">
+<h3 id="sec-1-9">Badge It</h3>
+<div class="outline-text-3" id="text-1-9">
+</div>
+<div id="outline-container-sec-1-9-1" class="outline-4">
+<h4 id="sec-1-9-1">Silver</h4>
+<div class="outline-text-4" id="text-1-9-1">
+<ul class="org-ul">
+<li>Follow the instructions given above, producing a working game.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-9-2" class="outline-4">
+<h4 id="sec-1-9-2">Gold</h4>
+<div class="outline-text-4" id="text-1-9-2">
+<ul class="org-ul">
+<li>Create a "Game over" sprite.
+</li>
+<li>Add script for it, so when the game is over, it shows up and hides at the start of a new game.        
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-9-3" class="outline-4">
+<h4 id="sec-1-9-3">Platinum</h4>
+<div class="outline-text-4" id="text-1-9-3">
+<ul class="org-ul">
+<li>A start new game screen so that players can:
+<ol class="org-ol">
+<li>click a button to start a new game
+</li>
+<li>As the snake grows longer, it moves faster
+</li>
+</ol>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="validation"></p>
+</div>
+</body>
+</html>
