@@ -148,10 +148,12 @@
 [[file:img/SnakeImg/script5.png]]
 5. Test your code and make sure everything is still working.
 6. Create another variable called *=score=*  to be used later and set it to 0 after green flag is clicked.
+[[file:img/SnakeImg/script16.png]]
 ** Code It - A mouse is placed on the board at a random location
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
+[[file:img/SnakeImg/mouse.svg]]
 1. To get on making our game, we are going to use the mouse sprite from the Scratch site. Once you finish making this game, you can always go back to change the sprite to what you like.
 
 #+BEGIN_HTML
@@ -172,7 +174,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-[[file:img/SnakeImg/head.png]]
+[[file:img/SnakeImg/mouse.svg]]
 1. The eating happens when the snake 'touch" the mouse. 
 2. Once eaten, the mouse needs to move to a new random location and the score increases by 1.
 3. This eating, moving to a new location and increasing score need to be monitored *=continuously=* during the game play.  All those three actions should be inside a *=forever loop=*.
@@ -184,6 +186,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
+[[file:img/SnakeImg/head.png]]
 1. This is probably the most difficult script to understand. So lets go over it slowly. Watch the following finished game carefully you will find the added body parts of the snake follow the head in both movement and directions. 
 2. In scratch, you can create a clone or many clones to do exactly what we want.
 #+BEGIN_HTML
