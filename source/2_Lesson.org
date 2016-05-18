@@ -1,0 +1,203 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+HTML_HEAD_EXTRA: <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+#+HTML_HEAD_EXTRA: <script src="js/navbar.js" type="text/javascript"></script>
+#+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil html-style:nil
+
+#+TITLE: Snake Game in Scratch
+#+AUTHOR: Xiaohui Ellis
+
+#+BEGIN_HTML
+  <div class="github-fork-ribbon-wrapper left">
+    <div class="github-fork-ribbon">
+      <a href="https://github.com/digixc/7-CS-ScratchArcade">Fork me on GitHub</a>
+    </div>
+  </div>
+<div id="stickyribbon">
+    <ul>
+      <li><a href="1_Lesson.html">Week1</a></li>
+      <li><a href="2_Lesson.html">Week2</a></li>
+      <li><a href="3_Lesson.html">Week3</a></li>
+      <li><a href="assessment.html">Assessment</a></li>
+    </ul>
+  </div>
+#+END_HTML
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+* Snake Game
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+- In this project you are going to create the well known snake game.
+- The game play is as follow:
+  1. The snake moves continuously on the game board
+  2. The player uses the arrow keys to direct the direction of the snake's movement
+  3.  A mouse is placed on the board at a random location
+  4.  If the snake eats a mouse, two things happen: the player scores one and the snake grows longer
+  5. When the snake has grown to certain length, there is danger that the snake may move cross its own body. If this happens, the game is over
+*** We are going to code the above steps one at a time in Scratch
+** Code It - The snake moves continuously on the game board
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+1. Create a new Scratch project.Delete the cat sptite by right clicking on it then delete.
+
+2. Next, we add a snake sprite. The sprite has two costumes, a head and a body. Right click on each image below to download to your homedrive. You can make your own later.
+
+#+BEGIN_HTML
+<img src='./img/SnakeImg/head.png' style='display: inline;margin-left: 100px;'>
+<img src='./img/SnakeImg/body.png' style='display: inline;margin-left: 100px;'>
+#+END_HTML
+
+3. Follow the following steps to create the snake sprite with two costumes.
+[[file:img/SnakeImg/stepsToCreateSprite.png]]
+4. Now, lets add =some scripts= to make the snake move =continuously=. =Continuous movement= means using a loop. The scripts for this are very simple for now.
+
+[[file:img/SnakeImg/script1.png]]
+
+
+** Code It - The player uses the arrow keys to direct the direction of the snake's movement
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+1. Next we need to enable to player to control which way the snake moves.
+2. This is accomplished by using the four arrows.
+3. Each time an arrow key is pressed, an event is =triggered=, then the snake will point the way the player wants it to move.
+4. During the game play, the event of arrow key pressing needs to be =continuously= monitored. Again, we will use a =forever loop=
+[[file:img/SnakeImg/script2.png]]
+5. You need to add code for other three arrow keys inside the loop.
+6. Test your code to make sure you can control which way the snake moves.If you are stuck, check that your code looks like [[./img/SnakeImg/script3.png][this]].
+** Code It - create variables to keep score and the speed of the snake movement
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+1. The snake movement is bit too fast. The computer is working as hard as it can to run your loop on move the snake 20 steps each loop.
+2. Lets create a variable called =speed= so that we can slow down the movement a bit but later we can also change the variable to make the game harder.
+[[file:img/SnakeImg/script4.png]]
+3. The speed is going to store the waiting time between each loop.
+4. We need to give it a value (number of seconds) at the start of the game. I used 0.2 seconds. You can use 0.1 second to make it move a bit faster.
+[[file:img/SnakeImg/script5.png]]
+5. Test your code and make sure everything is still working.
+6. Create another variable called =score= to be used later.
+** Code It - A mouse is placed on the board at a random location
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+1. To get on making our game, we are going to use the mouse sprite from the Scratch site. Once you finish making this game, you can always go back to change the sprite to what you like.
+
+#+BEGIN_HTML
+<img src='./img/SnakeImg/script6.png' style='display: inline;margin-left: 100px;'>
+<img src='./img/SnakeImg/script7.png' style='display: inline;margin-left: 100px;'>
+#+END_HTML
+
+2. Lets add code so the new sprite, mouse can be placed on *=a random location within the board=*.  The layout and dimension of the game board in Scratch is like this:
+[[file:img/SnakeImg/scratch-stage.jpg]]
+ + The maximum on Y axis is 240, the minimum on X axis is -240.
+ + The maximum on Y axis is 180, the minimum on Y axis is -180.
+3. We want the whole image of the mouse to be placed inside the border, so we need to pick a location that is somewhere between -230 and 230 on X axis and between -165 and 165 on Y axis.
+4. To pick a random location, we need to use the random block from Scratch's Operators block.
+5. Make sure you have click on the mouse sprite and then go to its script window. The mouse need to go to a random location at the start of the game (when the geen flag is clicked).
+[[file:img/SnakeImg/script8.png]]
+6. Test your code to make sure it works.
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+1. Let's create an explosion sprite. Make or import something that looks like a ball of fire. Make sure it starts off very small
+[[file:img/fig05.png]]
+2. [@2]When the missile touches the target a clone of the explosion will be made. We then want it to grow and shrink.
+[[file:img/fig06.png]]
+3. [@3]Now go back to the missile sprite and add in this script.
+[[file:img/fig07.png]]
+4. [@4]Click the green flag to make sure it all works.
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+1. To finish off we need to have the rocks begin destroyed if they touch the explosion. If they touch the base however, the game should end and a message should be displayed.
+2. Add a new backdrop to your stage. It should say something like =Game Over=
+3. Now switch to your =Rock= sprite and add in this script.
+[[file:img/fig09.png]]
+4. Test your game to make sure that it works.
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+*** Silver
+- The explosion is a little dull. Use some image effects and motion to make it a little more exciting as it grows and shrinks. You can find lots of options in the =Looks= Panel.
+*** Gold
+- The game is the same, all the way through. Make it more interesting by adding in a scoring system for each rock destroyed. A simple variable can do this. As the player's score increases, the rocks could get faster and more accurate.
+*** Platinum
+- The original game was a little different to the one we've created.
+- Instead of being able to see the missile sprite - hide it and use the pen tool to draw it's trail.
+- Add in an additional two bases for the player to defend.
+- Add in an occasional flying saucer that can drop bombs on the player's bases.
+- Allow the player to fire up to three missiles simultaneously.
