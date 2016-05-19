@@ -231,6 +231,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
+ [[file:img/SnakeImg/head.png]]
 1. The game is working. But it can be improved. When the snake hits the four borders, it simply stucks there. 
 2. If we can add some code so that the snake comes from the opposite side when it hits the border (teleport), it will make the game play smoother and more enjoyable.
 3. To let the snake teleport, we need to *=continuously detect=* when it hits the border:
