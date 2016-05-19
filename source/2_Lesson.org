@@ -204,12 +204,15 @@
  + if the costume being switched to body, the head no longer showed up.
 5. To correct the costume problem, we just need to switch the costume to head at the start of the game.
 6. To correct the too many clones problem, we need to delete some clones at regular intervals. But how many clones to keep? Well, each time the player scores, there should be a clone added to the snake. 
-7. The clone has been created every 0.2 seconds (the speed) continuously. To mainrain the same number of clones as the score, the time we need to wait before delete extra clones is:
+7. The clone has been created every 0.2 seconds (the speed) continuously. To maintain the same number of clones as the score, the time we need to wait before delete extra clones is:
 
     #+BEGIN_SRC
-    the number of clones * the speed
+            the number of clones x the speed
 
-    The Number of clones is the same as the score
+    Since the Number of clones is the same as the score, we can
+    just use the following formular to work out the waiting time to delete clones:
+
+            score x speed 
     #+END_SRC
 
     [[file:img/SnakeImg/script13.png]]
@@ -221,7 +224,12 @@
 :END:
 1. The game is over when the snake's body has crossed with itself. 
 2. When this happens, we need to broadcast a game over message, so other sprites can act accordingly. 
-3. It is much easier if you have a body costume that has a different colour from the head. 
+3. It is much easier if you have a body costume that has a different colour from the head. Add the following code and pick the body colour.
+      #+BEGIN_HTML
+    <video width="320" height="240" src="./img/SnakeImg/pickColor.mov"  controls />
+    </video>
+   #+END_HTML
+
 4. Since the body is a clone, we need to add some code to the clone on the snake sprite script window.
     [[file:img/SnakeImg/script14.png]]
 5. What heppens to the snake when the game is over? We can hide it and stop its scripts. BUT if you hide it, make sure you also add show at the start of the game.
@@ -231,6 +239,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
+ [[file:img/SnakeImg/head.png]]
 1. The game is working. But it can be improved. When the snake hits the four borders, it simply stucks there. 
 2. If we can add some code so that the snake comes from the opposite side when it hits the border (teleport), it will make the game play smoother and more enjoyable.
 3. To let the snake teleport, we need to *=continuously detect=* when it hits the border:
