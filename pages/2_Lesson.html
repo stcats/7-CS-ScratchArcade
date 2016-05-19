@@ -279,12 +279,15 @@ for the JavaScript code in this tag.
 </li>
 <li>To correct the too many clones problem, we need to delete some clones at regular intervals. But how many clones to keep? Well, each time the player scores, there should be a clone added to the snake. 
 </li>
-<li>The clone has been created every 0.2 seconds (the speed) continuously. To mainrain the same number of clones as the score, the time we need to wait before delete extra clones is:
+<li>The clone has been created every 0.2 seconds (the speed) continuously. To maintain the same number of clones as the score, the time we need to wait before delete extra clones is:
 
 <pre class="example">
-the number of clones * the speed
+        the number of clones x the speed
 
-The Number of clones is the same as the score
+Since the Number of clones is the same as the score, we can
+just use the following formular to work out the waiting time to delete clones:
+
+        score x speed
 </pre>
 
 
@@ -307,8 +310,11 @@ The Number of clones is the same as the score
 </li>
 <li>When this happens, we need to broadcast a game over message, so other sprites can act accordingly. 
 </li>
-<li>It is much easier if you have a body costume that has a different colour from the head. 
+<li>It is much easier if you have a body costume that has a different colour from the head. Add the following code and pick the body colour.
+<video width="320" height="240" src="./img/SnakeImg/pickColor.mov"  controls />
+</video>
 </li>
+
 <li>Since the body is a clone, we need to add some code to the clone on the snake sprite script window.
 <img src="img/SnakeImg/script14.png" alt="script14.png" />
 </li>
