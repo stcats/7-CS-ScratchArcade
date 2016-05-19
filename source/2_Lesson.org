@@ -112,13 +112,13 @@
 
 2. Next, we add a snake sprite. The sprite has two costumes, a head and a body. Right click on each image below to download to your homedrive. You can make your own later.
 
-#+BEGIN_HTML
-<img src='./img/SnakeImg/head.png' style='display: inline;margin-left: 100px;'>
-<img src='./img/SnakeImg/body.png' style='display: inline;margin-left: 100px;'>
-#+END_HTML
+   #+BEGIN_HTML
+   <br><img src='./img/SnakeImg/head.png' style='display: inline;margin-left: 100px;'>
+   <img src='./img/SnakeImg/body.png' style='display: inline;margin-left: 160px;'>
+   #+END_HTML
 
-3. Follow the following steps to create the snake sprite with two costumes.
-[[file:img/SnakeImg/stepsToCreateSprite.png]]
+3. Follow the steps below to create the snake sprite with two costumes.
+    [[file:img/SnakeImg/stepsToCreateSprite.png]]
 4. Now, lets add *=some scripts=* to make the snake move *=continuously=*. *=Continuous movement=* means using a loop. The scripts for this are very simple for now.
 
 [[file:img/SnakeImg/script1.png]]
@@ -133,22 +133,23 @@
 2. This is accomplished by using the four arrows.
 3. Each time an arrow key is pressed, an event is =triggered=, then the snake will point the way the player wants it to move.
 4. During the game play, the event of arrow key pressing needs to be *=continuously=* monitored. Again, we will use a *=forever loop=*
-[[file:img/SnakeImg/script2.png]]
+     [[file:img/SnakeImg/script2.png]]
 5. You need to add code for other three arrow keys inside the loop.
 6. Test your code to make sure you can control which way the snake moves.If you are stuck, check that your code looks like [[./img/SnakeImg/script3.png][this]].
 ** Code It - create variables to keep score and the speed of the snake movement
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
+[[file:img/SnakeImg/head.png]]
 1. The snake movement is bit too fast. The computer is working as hard as it can to run your loop on move the snake 20 steps each loop.
 2. Lets create a variable called =speed= so that we can slow down the movement a bit but later we can also change the variable to make the game harder.
-[[file:img/SnakeImg/script4.png]]
+   [[file:img/SnakeImg/script4.png]]
 3. The speed is going to store the waiting time between each loop.
 4. We need to give it a value (number of seconds) at the start of the game. I used 0.2 seconds. You can use 0.1 second to make it move a bit faster.
-[[file:img/SnakeImg/script5.png]]
+   [[file:img/SnakeImg/script5.png]]
 5. Test your code and make sure everything is still working.
 6. Create another variable called *=score=*  to be used later and set it to 0 after green flag is clicked.
-[[file:img/SnakeImg/script16.png]]
+    [[file:img/SnakeImg/script16.png]]
 ** Code It - A mouse is placed on the board at a random location
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
@@ -156,19 +157,19 @@
 [[file:img/SnakeImg/mouse.svg]]
 1. To get on making our game, we are going to use the mouse sprite from the Scratch site. Once you finish making this game, you can always go back to change the sprite to what you like.
 
-#+BEGIN_HTML
-<img src='./img/SnakeImg/script6.png' style='display: inline;margin-left: 100px;'>
-<img src='./img/SnakeImg/script7.png' style='display: inline;margin-left: 100px;'>
-#+END_HTML
+   #+BEGIN_HTML
+   <img src='./img/SnakeImg/script6.png' style='display: inline;margin-left: 100px;'>
+   <img src='./img/SnakeImg/script7.png' style='display: inline;margin-left: 100px;'>
+   #+END_HTML
 
 2. Lets add code so the new sprite, mouse can be placed on *=a random location within the board=*.  The layout and dimension of the game board in Scratch is like this:
-[[file:img/SnakeImg/scratch-stage.jpg]]
+    [[file:img/SnakeImg/scratch-stage.jpg]]
  + The maximum on Y axis is 240, the minimum on X axis is -240.
  + The maximum on Y axis is 180, the minimum on Y axis is -180.
 3. We want the whole image of the mouse to be placed inside the border, so we need to pick a location that is somewhere between -230 and 230 on X axis and between -165 and 165 on Y axis.
 4. To pick a random location, we need to use the random block from Scratch's Operators block.
 5. Make sure you have click on the mouse sprite and then go to its script window. The mouse need to go to a random location at the start of the game (when the geen flag is clicked).
-[[file:img/SnakeImg/script8.png]]
+    [[file:img/SnakeImg/script8.png]]
 6. Test your code to make sure it works.
 ** Code It - The snake eats the mouse and score increase by 1
 :PROPERTIES:
@@ -179,7 +180,7 @@
 2. Once eaten, the mouse needs to move to a new random location and the score increases by 1.
 3. This eating, moving to a new location and increasing score need to be monitored *=continuously=* during the game play.  All those three actions should be inside a *=forever loop=*.
 4. make sure you are working on the mouse sprite script window. 
-[[file:img/SnakeImg/script9.png]]
+   [[file:img/SnakeImg/script9.png]]
 
 5. Test again and make sure it all works.
 ** Code It - The snake eats the mouse and it grows by one size
@@ -189,15 +190,15 @@
 [[file:img/SnakeImg/head.png]]
 1. This is probably the most difficult script to understand. So lets go over it slowly. Watch the following finished game carefully you will find the added body parts of the snake follow the head in both movement and directions. 
 2. In scratch, you can create a clone or many clones to do exactly what we want.
-#+BEGIN_HTML
-<video width="320" height="240" src="./img/SnakeImg/demo.mov"  controls />
-</video>
-#+END_HTML
+    #+BEGIN_HTML
+    <video width="320" height="240" src="./img/SnakeImg/demo.mov"  controls />
+    </video>
+   #+END_HTML
 
 3. Lets create some clones to follow the head. 
-[[file:img/SnakeImg/script11.png]]
+    [[file:img/SnakeImg/script11.png]]
 4. Those clones should have the costume of the body, NOT the head. So after being created as a clone, they should switch costume to the body. So add the following code block to your snake sprite.
-[[file:img/SnakeImg/script12.png]]
+    [[file:img/SnakeImg/script12.png]]
 4. Test your code now you will find:
  + there are too many clones being created
  + if the costume being switched to body, the head no longer showed up.
@@ -205,13 +206,13 @@
 6. To correct the too many clones problem, we need to delete some clones at regular intervals. But how many clones to keep? Well, each time the player scores, there should be a clone added to the snake. 
 7. The clone has been created every 0.2 seconds (the speed) continuously. To mainrain the same number of clones as the score, the time we need to wait before delete extra clones is:
 
-#+BEGIN_SRC
-the number of clones * the speed
+    #+BEGIN_SRC
+    the number of clones * the speed
 
-The Number of clones is the same as the score
-#+END_SRC
+    The Number of clones is the same as the score
+    #+END_SRC
 
-[[file:img/SnakeImg/script13.png]]
+    [[file:img/SnakeImg/script13.png]]
 8. Test your code, it should now keep tracking of score and the snake should grow after eating a mouse.
 
 ** Code It - Game Over
@@ -222,18 +223,31 @@ The Number of clones is the same as the score
 2. When this happens, we need to broadcast a game over message, so other sprites can act accordingly. 
 3. It is much easier if you have a body costume that has a different colour from the head. 
 4. Since the body is a clone, we need to add some code to the clone on the snake sprite script window.
-[[file:img/SnakeImg/script14.png]]
+    [[file:img/SnakeImg/script14.png]]
 5. What heppens to the snake when the game is over? We can hide it and stop its scripts. BUT if you hide it, make sure you also add show at the start of the game.
-[[file:img/SnakeImg/script15.png]]
+    [[file:img/SnakeImg/script15.png]]
 5. Do the same for the mouse's script when the mouse receives GameOver message.
-
+** Code It - Improve the game by letting the snake to teleport
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+1. The game is working. But it can be improved. When the snake hits the four borders, it simply stucks there. 
+2. If we can add some code so that the snake comes from the opposite side when it hits the border (teleport), it will make the game play smoother and more enjoyable.
+3. To let the snake teleport, we need to *=continuously detect=* when it hits the border:
+    + the X axis maximum when the snake is moving right
+    + the X axis minimum when the snake is moving left
+    + the Y axis maximum when the snake is moving up
+    + the Y axis minimum when the snake is moving down
+     [[file:img/SnakeImg/script17.png]]
+4. Can you add other three conditions when the snake is moving left, up and down?
 ** Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
 *** Silver
-- Follow the instructions given above, producing a working game.
+- Follow the instructions given above, producing a working game without the ability to teleport the snake.
 *** Gold
+- Finish the teleport code so that the snake can teleport from all 4 sides.
 - Create a "Game over" sprite.
 - Add script for it, so when the game is over, it shows up and hides at the start of a new game.	
 *** Platinum
